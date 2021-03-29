@@ -110,7 +110,7 @@ function showProducts(){
 								<div class="content-product">
 									<span>${item.content}</span>
 								</div>
-								<div class="footer-product">
+								<div class="footer-product"  onclick ='addCart()'>
 									<p>${item.footer}</p>
 								</div>
 							</div>
@@ -131,7 +131,7 @@ function showProducts(){
 								<div class="content-product">
 									<span>${item.content}</span>
 								</div>
-								<div class="footer-product">
+								<div class="footer-product" onclick ='addCart()'>
 									<p>${item.footer}</p>
 								</div>
 							</div>
@@ -140,7 +140,23 @@ function showProducts(){
 		
 	})
 }
-
+function addCart(){						
+	cart();
+}
+var count =0;
+var countNumber = document.getElementById('count');
+function cart(){
+	
+	if(count==0){
+		countNumber.style.display = 'none';
+	}
+	else{
+		countNumber.style.display = 'block';
+		countNumber.innerHTML = count;
+	}
+	count++;
+	return count;
+}
 function numberlist(){
 	let numberList = document.getElementById('number-list');
 	for(let i=1;i<8;i++){
@@ -212,5 +228,6 @@ function main(){
 	numberlist();
 	textFooter();
 	activeNumber();
+	cart();
 }
 main();

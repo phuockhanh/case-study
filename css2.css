@@ -90,6 +90,7 @@
 	height: 80px;
 	/*border: 1px solid black;*/
 	width: 20%;
+	position: relative;
 }
 .topNav .iconNav ul{
 	display: flex;
@@ -104,6 +105,68 @@
 }
 .topNav .iconNav ul li:hover{
 	border-bottom: 2px solid #BB0000;
+}
+.iconNav #count{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	top: 35px;
+	right: 70px;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	background-color: orange;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+}
+.shopDown{
+	position: relative;
+	display: unset;
+}
+.dropDown-shop{
+	position: absolute;
+	top: 70px;
+	display: none;
+	background-color: #fff;
+	border: 1px solid #CCCCCC;
+	height: 350px;
+	width: 500px;
+	z-index: 1;
+	padding: 10px;
+	line-height: 40px;
+	font-size: 14px;
+}
+.dropDown-shop p{
+	border-bottom: 1px solid #ccc;
+}
+.dropDown-shop .drop1{
+	float: left;
+	margin : 15px;
+	height: 100%;
+	width: 27%;
+}
+.dropDown-shop .drop1 p:nth-last-of-type(1){
+	border : none;
+}
+.dropDown-shop p:nth-child(1){
+	font-size: 16px;
+	font-weight: bold;
+}
+.shopDown:hover .dropDown-shop{
+	display: block;
+}
+#showCart{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	height: 100px;
+	width: 100px;
+	border: 1px solid red;
+}
+.iconNav:hover #showCart{
+	display: block;
 }
 .container{
 	width: 1100px;
